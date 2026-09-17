@@ -143,14 +143,19 @@ The test corpus is expected to include representative open standards such as NIE
 
 - [Technical design](DESIGN.md)
 - [Compatibility contract](docs/COMPATIBILITY.md)
+- [Compatibility rule registry](docs/RULES.md)
 - [Threat model](docs/THREAT_MODEL.md)
 - [Release and supply-chain policy](docs/RELEASE.md)
 - [Fixture and IP policy](docs/FIXTURE_POLICY.md)
+- [Authoritative references](docs/REFERENCES.md)
+- [Recommended repository settings](docs/REPOSITORY_SETTINGS.md)
 - [Architecture decisions](docs/adr/README.md)
 - [Contributing](CONTRIBUTING.md)
 - [Security reporting](SECURITY.md)
 - [Support policy](SUPPORT.md)
 - [Governance](GOVERNANCE.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Changelog](CHANGELOG.md)
 
 ## License
 
