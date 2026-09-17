@@ -21,6 +21,11 @@ Architecture Decision Records (ADRs) capture durable decisions whose context and
 - [ADR-0008: Policy does not rewrite semantic classification](0008-policy-does-not-change-classification.md)
 - [ADR-0009: No runtime plugin system](0009-no-runtime-plugin-system.md)
 - [ADR-0010: Compatibility ruleset versioning](0010-ruleset-versioning.md)
+- [ADR-0011: Permanent Go module path](0011-module-path.md)
+- [ADR-0012: XML input and encoding contract](0012-xml-input-contract.md)
+- [ADR-0013: Strict configuration parsing](0013-strict-configuration.md)
+- [ADR-0014: URI-reference semantics remain separate from filesystem paths](0014-uri-filesystem-boundary.md)
+- [ADR-0015: Go toolchain and module-graph policy](0015-go-toolchain-policy.md)
 
 ## When an ADR is required
 
@@ -32,6 +37,10 @@ Use an ADR for changes such as:
 - expanding XSD-version guarantees;
 - adding hosted/runtime-plugin infrastructure;
 - changing licensing/contribution terms;
+- changing the canonical Go module path;
+- changing the XML input/version/encoding contract;
+- weakening strict configuration parsing;
+- changing the URI/filesystem security boundary;
 - changing a major security/trust boundary;
 - changing the portable CLI/JSON contract materially;
 - allowing policy to alter semantic classification;
