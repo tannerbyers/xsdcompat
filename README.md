@@ -131,7 +131,7 @@ See [SECURITY.md](SECURITY.md) and [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
 
 The shipped Go module is expected to contain **no third-party Go modules**. External development, CI, vulnerability-scanning, SBOM, or release tools may be used without entering the product dependency graph.
 
-A dependency may only be proposed when implementing the required capability ourselves would present a demonstrably greater correctness or security risk. See [DESIGN.md](DESIGN.md#dependency-exception-policy).
+A dependency may only be proposed when implementing the required capability ourselves would present a demonstrably greater correctness or security risk. See [DESIGN.md](DESIGN.md#33-dependency-exception-policy).
 
 ## Standards scope
 
@@ -139,12 +139,20 @@ The compatibility engine targets XSD 1.0 semantics first. XSD 1.1 constructs sho
 
 The test corpus is expected to include representative open standards such as NIEM and ISO 20022 where licensing permits. Third-party fixtures require explicit provenance and license review. See [docs/FIXTURE_POLICY.md](docs/FIXTURE_POLICY.md).
 
+## Compliance boundary
+
+`xsdcompat` is a developer analysis tool, not a certification or regulatory-compliance product. It must not claim that an XSD result establishes compliance with ISO 20022, NIEM, FDA requirements, HIPAA, PCI DSS, SOX, FedRAMP, or another regulatory/framework obligation.
+
+See [docs/COMPLIANCE.md](docs/COMPLIANCE.md).
+
 ## Documentation
 
 - [Technical design](DESIGN.md)
 - [Compatibility contract](docs/COMPATIBILITY.md)
 - [Compatibility rule registry](docs/RULES.md)
+- [Testing and conformance strategy](docs/TESTING.md)
 - [Threat model](docs/THREAT_MODEL.md)
+- [Compliance and regulatory boundaries](docs/COMPLIANCE.md)
 - [Release and supply-chain policy](docs/RELEASE.md)
 - [Fixture and IP policy](docs/FIXTURE_POLICY.md)
 - [Authoritative references](docs/REFERENCES.md)
