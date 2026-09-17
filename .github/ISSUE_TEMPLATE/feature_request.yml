@@ -1,0 +1,56 @@
+name: Feature request
+description: Propose a bounded product or compatibility-analysis improvement
+title: "[Feature]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please review DESIGN.md and the ADRs first. Features that expand runtime network access, dependencies, plugin execution, XSD-version guarantees, or compatibility semantics may require an ADR.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the concrete workflow or limitation rather than only the desired implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example schema/workflow
+      description: Provide a minimal synthetic example when possible. Do not attach proprietary schemas without redistribution permission.
+      render: text
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What should xsdcompat report or enable?
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Area
+      options:
+        - XSD semantic compiler
+        - Compatibility rule
+        - Diff/reporting
+        - Configuration/policy
+        - CLI/API
+        - CI/release integration
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: standards
+    attributes:
+      label: Standards / evidence
+      description: If this changes XSD semantics, include relevant W3C/standards references or real-world evidence.
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Design constraints considered
+      options:
+        - label: I reviewed the zero-dependency/offline design constraints.
+        - label: I considered whether this can remain deterministic and safely bounded for untrusted input.

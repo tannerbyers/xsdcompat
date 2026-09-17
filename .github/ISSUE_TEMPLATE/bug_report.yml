@@ -1,0 +1,72 @@
+name: Bug report
+description: Report a reproducible xsdcompat correctness or behavior problem
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include confidential, proprietary, regulated, or customer schemas unless you have permission to publish them. For security vulnerabilities, follow SECURITY.md instead of filing a public issue.
+  - type: input
+    id: version
+    attributes:
+      label: xsdcompat version or commit
+      placeholder: v0.x.y or commit SHA
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: macOS arm64, Linux amd64, Windows amd64, etc.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Schema parsing / namespaces
+        - Include / import / catalog resolution
+        - Semantic model / normalization
+        - Diff output
+        - Compatibility classification
+        - CLI / report format
+        - Performance / resource limits
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide sanitized/minimal XSDs or steps that reproduce the problem.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Include compatibility direction, configuration, relevant rule IDs, and standards references if applicable.
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Disclosure check
+      options:
+        - label: I have permission to publish any schemas/data included in this issue.
+          required: true
+        - label: This report does not contain an undisclosed security vulnerability.
+          required: true
